@@ -40,6 +40,8 @@ case "$baseband" in
     "apq" | "sda" | "qcs" )
 #    setprop ro.vendor.radio.noril yes
     setprop ro.vendor.radio.noril true
+    stop ril-daemon
+    stop vendor.ril-daemon
     stop vendor.qcrild
 esac
 
